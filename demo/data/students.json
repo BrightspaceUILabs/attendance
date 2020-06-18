@@ -1,0 +1,32 @@
+[
+  {
+    "UserId": 100,
+    "Name": "Jonathan",
+    "Note": null,
+    "SymbolAttendanceData": {
+      "Id": 3,
+      "Symbol": "L",
+      "Name": "Late"
+    }
+  },
+  {
+    "UserId": 101,
+    "Name": "Emilee",
+    "Note": null,
+    "SymbolAttendanceData": {
+      "Id": 3,
+      "Symbol": "P",
+      "Name": "Present"
+    }
+  },
+  {
+    "UserId": 102,
+    "Name": "Olivia",
+    "Note": null,
+    "SymbolAttendanceData": {
+      "Id": 3,
+      "Symbol": "E",
+      "Name": "Excused"
+    }
+  }
+]
