@@ -39,5 +39,6 @@
     "@brightspace-ui/core": "^1.49.0",
     "d2l-table": "BrightspaceUI/table#semver:^2",
     "lit-element": "^2"
-  }
+  },
+  "version": "1.0.0"
 }
