@@ -1,7 +1,5 @@
 # d2l-labs-attendance
 
-![Build status](https://github.com/BrightspaceUILabs/attendance/workflows/CI/badge.svg)
-
 > Note: this is a ["labs" component](https://github.com/BrightspaceUI/guide/wiki/Component-Tiers). While functional, these tasks are prerequisites to promotion to BrightspaceUI "official" status:
 >
 > - [ ] [Design organization buy-in](https://github.com/BrightspaceUI/guide/wiki/Before-you-build#working-with-design)
