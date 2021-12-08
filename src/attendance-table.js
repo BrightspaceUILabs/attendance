@@ -1,8 +1,8 @@
-import '@brightspace-ui/core/components/button/button-subtle';
-import './d2l-attendance-absent-icon';
-import './d2l-attendance-excused-icon';
-import './d2l-attendance-late-icon';
-import './d2l-attendance-present-icon';
+import '@brightspace-ui/core/components/button/button-subtle.js';
+import './d2l-attendance-absent-icon.js';
+import './d2l-attendance-excused-icon.js';
+import './d2l-attendance-late-icon.js';
+import './d2l-attendance-present-icon.js';
 
 import { css, html, LitElement } from 'lit-element/lit-element.js';
 
@@ -74,8 +74,30 @@ class AttendanceTable extends LitElement {
 			r => r.json()
 		).then(data => this.students = data);
 	}
-	_getColor() {
 
+	render() {
+		return html`
+			<table-wrapper sticky-headers> </table-wrapper>
+			<table>
+				<thead>
+					<tr>
+						<th>
+							<table-col-sort-button desc
+								>Name</table-col-sort-button
+							>
+						</th>
+						<th>Present</th>
+						<th>Late</th>
+						<th>Excused</th>
+						<th>Absent</th>
+						<th colspan="2">Note</th>
+					</tr>
+				</thead>
+				<tbody>
+					${this.students && this.students.map(studentData => this.renderStudentRow(studentData))}
+				</tbody>
+			</table>
+		`;
 	}
 
 	renderStudentRow(studentData) {
@@ -122,36 +144,16 @@ class AttendanceTable extends LitElement {
 			</d2l-button-subtle>
 		</td>
 		<td>
-			<d2l-input-text width="100px">
+			<d2l-input-text width="100px" label="TODO" label-hidden>
 			></d2l-input-text>
 		</td>
 	</tr>`;
 
 	}
 
-	render() {
-		return html`
-			<table-wrapper sticky-headers> </table-wrapper>
-			<table>
-				<thead>
-					<tr>
-						<th>
-							<table-col-sort-button desc
-								>Name</table-col-sort-button
-							>
-						</th>
-						<th>Present</th>
-						<th>Late</th>
-						<th>Excused</th>
-						<th>Absent</th>
-						<th colspan="2">Note</th>
-					</tr>
-				</thead>
-				<tbody>
-					${this.students && this.students.map(studentData => this.renderStudentRow(studentData))}
-				</tbody>
-			</table>
-		`;
+	_getColor() {
+
 	}
+
 }
 customElements.define('d2l-attendance-table', AttendanceTable);

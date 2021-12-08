@@ -1,8 +1,8 @@
-import '@brightspace-ui/core/components/button/button';
-import '@brightspace-ui/core/components/button/button-subtle';
+import '@brightspace-ui/core/components/button/button.js';
+import '@brightspace-ui/core/components/button/button-subtle.js';
 import '@brightspace-ui/core/components/inputs/input-date.js';
 import '@brightspace-ui/core/components/inputs/input-search.js';
-import './src/attendance-table';
+import './src/attendance-table.js';
 import { css, html, LitElement } from 'lit-element/lit-element.js';
 import { LocalizeMixin } from '@brightspace-ui/core/mixins/localize-mixin.js';
 
